@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SandboxColumn extends StatelessWidget {
-  const SandboxColumn({super.key});
+class Sandbox extends StatelessWidget {
+  const Sandbox({super.key});
 
   @override
   Widget build(BuildContext context) {
