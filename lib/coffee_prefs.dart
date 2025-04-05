@@ -15,47 +15,53 @@ class CoffeePrefs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          children: [
-            const Text('Strength: '),
-            const Text('3'),
-            Image.asset(
-              'assets/img/coffee_bean.png',
-              width: 25,
-              color: Colors.brown[100],
-              colorBlendMode: BlendMode.multiply,
-            ),
-            Expanded(child: const SizedBox()),
-            FilledButton(
-              style: FilledButton.styleFrom(
-                backgroundColor: Colors.brown,
-                foregroundColor: Colors.white,
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          child: Row(
+            children: [
+              const Text('Strength: '),
+              const Text('3'),
+              Image.asset(
+                'assets/img/coffee_bean.png',
+                width: 25,
+                color: Colors.brown[100],
+                colorBlendMode: BlendMode.multiply,
               ),
-              onPressed: increaseStrength,
-              child: const Text('+'),
-            ),
-          ],
+              const Expanded(child: SizedBox()),
+              FilledButton(
+                style: FilledButton.styleFrom(
+                  backgroundColor: Colors.brown,
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: increaseStrength,
+                child: const Text('+'),
+              ),
+            ],
+          ),
         ),
-        Row(
-          children: [
-            const Text('Sugars: '),
-            const Text('3'),
-            Image.asset(
-              'assets/img/sugar_cube.png',
-              width: 25,
-              color: Colors.brown[100],
-              colorBlendMode: BlendMode.multiply,
-            ),
-            Expanded(child: const SizedBox()),
-            FilledButton(
-              style: FilledButton.styleFrom(
-                backgroundColor: Colors.brown,
-                foregroundColor: Colors.white,
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          child: Row(
+            children: [
+              const Text('Sugars: '),
+              const Text('3'),
+              Image.asset(
+                'assets/img/sugar_cube.png',
+                width: 25,
+                color: Colors.brown[100],
+                colorBlendMode: BlendMode.multiply,
               ),
-              onPressed: increaseSugars,
-              child: const Text('+'),
-            ),
-          ],
+              const Expanded(child: SizedBox()),
+              FilledButton(
+                style: FilledButton.styleFrom(
+                  backgroundColor: Colors.brown,
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: increaseSugars,
+                child: const Text('+'),
+              ),
+            ],
+          ),
         ),
       ],
     );
